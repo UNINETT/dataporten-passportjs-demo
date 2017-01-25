@@ -13,7 +13,7 @@ var OICStrategy = require('passport-openid-connect').Strategy
 var User = require('passport-openid-connect').User
 
 nconf.argv()
-    .env('_')
+    .env('__')
     .file({ file: 'etc/config.json' })
     .defaults({
 		"http": {
@@ -51,8 +51,6 @@ passport.deserializeUser(OICStrategy.deserializeUser)
 
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 
 
 app.get('/', (req, res) => {
