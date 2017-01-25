@@ -1,9 +1,7 @@
 # Dataporten and Node.js using OpenID Connect
 
 
-A simple example of using an OpenID Connect library to conect with Dataporten using Node.js
-
-This is only for debugging, experimenting and understanding how OpenID Connect works and can be used. Not ready for integration with applications.
+A demo of using the OpenID Connect passportjs strategy with Dataporten.
 
 To run:
 
@@ -12,5 +10,14 @@ npm install
 npm start
 ```
 
+Or with Docker
 
-To use OpenID Connect with  Dataporten from an Node.js application in production, instead use in example the passportjs opendid connect strategy. Link to be added.
+```
+docker-compose up --build  demo
+```
+
+Remember to configure your client in `etc/config.json` with a trusted client, or using environment variables such as:
+
+```
+dataporten__client_secret=fb2de219-28ee-45ed-ba92-75d105b23951
+```
